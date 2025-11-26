@@ -1,0 +1,83 @@
+:root {
+    interpolate-size: allow-keywords;
+  }
+  
+  details {
+    background: #f4f5f8;
+    
+    overflow: hidden;
+  }
+  details::details-content {
+    color: hsl(0 0% 78%);
+    font-size: 1rem;
+    block-size: 0;
+    transition: block-size 1s, content-visibility 1s;
+    transition-behavior: allow-discrete;
+  }
+  
+  details:open::details-content {
+    block-size: auto;
+  }
+  
+ 
+  
+  
+  
+    details,
+    summary {
+      margin-block-end: 0;
+    }
+  
+   
+  
+  
+    details * {
+      margin: 0;
+      
+    }
+  
+    details > p {
+      position: relative;
+    padding: 0px 30px 30px;
+    background-color: #f4f5f8;
+    color: #676977;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.7rem;
+    }
+  
+    summary {
+        position: relative;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        padding: 30px;
+        padding-right: 60px;
+        color: #0f2454;
+        transition: all 500ms ease;
+        font-family: 'Outfit', sans-serif;
+        list-style-position: outside;
+    }
+    details > summary {
+        list-style: none;
+      }
+      details[open] > summary{
+       
+        color: var(--color-primary) ;
+      }
+     
+  
+     .iconDetail{ position: absolute;
+    right: 35px;
+    top: 24px;
+    height: 30px;
+    font-size: 25px;
+    color: #f5b754;
+    line-height: 30px;
+    font-family: "themify";
+    transition: all 300ms ease;}
+    details[open] .iconDetail {
+      transform: rotate(90deg);
+      color: #333 !important;
+    }
