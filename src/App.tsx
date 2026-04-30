@@ -131,7 +131,8 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Route>
-      )
+      ),
+      { basename: '/travelAgency_clone' }
   );
   return (
     <>

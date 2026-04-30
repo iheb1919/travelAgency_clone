@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 const NotFound = () => {
   return (
     <div data-overlay-dark="3" className='w- flex justify-center items-center   h-screen bg-cover bg-no-repeat' style={{
-        backgroundImage:"url('/slider/8.jpg')",
+        backgroundImage:"url('/travelAgency_clone/slider/8.jpg')",
         backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundAttachment: "fixed"

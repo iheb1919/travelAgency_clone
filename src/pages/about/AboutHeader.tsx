@@ -3,7 +3,7 @@ import { ReactElement } from "react"
 type AboutHeaderProps = {
     position?:string, background?:string,title:ReactElement
   }
-  const AboutHeader:React.FC<AboutHeaderProps> = ({background="url(/slider/15.jpg)",title,position}) => {
+  const AboutHeader:React.FC<AboutHeaderProps> = ({background="url(/travelAgency_clone/slider/15.jpg)",title,position}) => {
     return (
       <div style={
           {backgroundImage:background}

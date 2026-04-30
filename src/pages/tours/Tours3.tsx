@@ -11,7 +11,7 @@ const Tours3 = () => {
           title: "Documents required for car rental",
           blogger: "Olivia D.",
           comments: 5,
-          img: "/carRent%20images/blog/03.jpg"
+          img: "/travelAgency_clone/carRent%20images/blog/03.jpg"
     
         },
         {
@@ -19,7 +19,7 @@ const Tours3 = () => {
           title: "Rental cost of sport and other cars",
           blogger: "Olivia D.",
           comments: 5,
-          img: "/carRent%20images/blog/04.jpg"
+          img: "/travelAgency_clone/carRent%20images/blog/04.jpg"
     
         },
         {
@@ -27,7 +27,7 @@ const Tours3 = () => {
           title: "Rental cars how to check driving fines?",
           blogger: "Olivia D.",
           comments: 5,
-          img: "/carRent%20images/blog/05.jpg"
+          img: "/travelAgency_clone/carRent%20images/blog/05.jpg"
     
         },
         {
@@ -35,7 +35,7 @@ const Tours3 = () => {
           title: "How to Rent a Car at the Airport Terminal?",
           blogger: "Olivia D.",
           comments: 5,
-          img: "/carRent%20images/blog/06.jpg"
+          img: "/travelAgency_clone/carRent%20images/blog/06.jpg"
     
         },
         {
@@ -43,7 +43,7 @@ const Tours3 = () => {
           title: "Penalties for violating the rules in rental cars",
           blogger: "Olivia D.",
           comments: 5,
-          img: "/carRent%20images/blog/01.jpg"
+          img: "/travelAgency_clone/carRent%20images/blog/01.jpg"
     
         },
         {
@@ -51,7 +51,7 @@ const Tours3 = () => {
           title: "How to check a car before renting?",
           blogger: "Olivia D.",
           comments: 5,
-          img: "/carRent%20images/blog/02.jpg"
+          img: "/travelAgency_clone/carRent%20images/blog/02.jpg"
     
         },
       ]
@@ -62,7 +62,7 @@ const Tours3 = () => {
 return(
     <>
     <AboutHeader 
-      background='url(/slider/2.jpg)'
+      background='url(/travelAgency_clone/slider/2.jpg)'
       title={
         <div className="lg:w-1/2 uppercase mt-[90px]">
         <h6 className={`text-white text-[13px] font-[300] tracking-[6px] inline-block mb-[15px] uppercase `} > travel countries </h6>
@@ -80,7 +80,7 @@ return(
                 {
                 currentItems.map((blog, i) => <div key={i} className="square-flip">
                         <div className="square bg-img" data-background="img/destination/canada1.jpg" style={{
-                            backgroundImage: "url('/destinations/canada1.jpg')"
+                            backgroundImage: "url('/travelAgency_clone/destinations/canada1.jpg')"
                         }}>
                             <div className="square-container flex  items-end justify-end ">
                                 <div className="box-title">

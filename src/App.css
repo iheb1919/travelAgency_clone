@@ -160,7 +160,7 @@ section .text p{
 
 .fixedImg{
   padding: 120px  0;
-  background-image: url('/slider/15.jpg');
+  background-image: url('/travelAgency_clone/slider/15.jpg');
   background-attachment: fixed;
   background-size: cover;
   width: 100%;

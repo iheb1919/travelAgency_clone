@@ -9,7 +9,7 @@ const CommingSoon = () => {
     style={{
       background:"rgba(15, 36, 84,.4)",
       backgroundBlendMode:"overlay",
-      backgroundImage:"url('/slider/8.jpg')",
+      backgroundImage:"url('/travelAgency_clone/slider/8.jpg')",
       backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundAttachment: "fixed"

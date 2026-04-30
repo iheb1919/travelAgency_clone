@@ -9,7 +9,7 @@ const ContactPage = () => {
     <div className='z-50' >
 
 <AboutHeader 
-          background='url(/slider/15.jpg)'
+          background='url(/travelAgency_clone/slider/15.jpg)'
           title={
             <div className="w-full lg:w-1/2  mt-[90px]">
             <h6 className={`text-white text-[13px] font-[300] tracking-[6px] inline-block mb-[15px] uppercase `} > Get in touch

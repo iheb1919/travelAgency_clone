@@ -19,7 +19,7 @@ const PopularTours2 = () => {
 
         <div key={i} className="square-flip">
         <div className="square bg-img" data-background="img/destination/canada1.jpg" style={{
-          backgroundImage: "url('/destinations/canada1.jpg')"
+          backgroundImage: "url('/travelAgency_clone/destinations/canada1.jpg')"
         }}>
             <div className="square-container flex  items-end justify-end ">
                 <div className="box-title">

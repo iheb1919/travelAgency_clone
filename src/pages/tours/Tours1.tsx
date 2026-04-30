@@ -6,7 +6,7 @@ const Tours1 = () => {
 return(
     <>
     <AboutHeader 
-      background='url(/slider/2.jpg)'
+      background='url(/travelAgency_clone/slider/2.jpg)'
       title={
         <div className="lg:w-1/2 uppercase mt-[90px]">
         <h6 className={`text-white text-[13px] font-[300] tracking-[6px] inline-block mb-[15px] uppercase `} > Choose your tour </h6>

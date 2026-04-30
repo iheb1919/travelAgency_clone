@@ -6,72 +6,72 @@ import { Link } from 'react-router';
 import { ArrowRight, LocationIcon } from '../../icons/icons';
 import ImagecontainerTours from '../ImageContainer';
 import { TourType } from '../landingC/PopularDestination';
-export const tours:TourType[] = [
- 
+export const tours: TourType[] = [
+
     {
-      category: '25% OFF',
-      title: 'France',
-      img: './tours/france2.jpg',
-      footerText: '4 Tour Packages',
+        category: '25% OFF',
+        title: 'France',
+        img: './tours/france2.jpg',
+        footerText: '4 Tour Packages',
     },
     {
-      category: '7 TOURS',
-      title: 'Dubai',
-      img: './tours/rome1.jpg',
-      footerText: '4 Tour Packages',
+        category: '7 TOURS',
+        title: 'Dubai',
+        img: './tours/rome1.jpg',
+        footerText: '4 Tour Packages',
     },
-  ];
+];
 const TravelCountries2 = () => {
-  return (
-    <section className='my-[90px] '>
-       <div className='container mx-auto relative '>
-       <div className='flex flex-col gap-4 mb-5'>
-           <div>
-                <h4> Most Popular</h4>
-                <h1 className="">Travel <span>Countries</span>  </h1>
-           </div>
-       </div>
-        
-        <PopularDestinationCaroucel tours={tours} />
-         </div>
-       
-          
-           </section>
-  )
+    return (
+        <section className='my-[90px] '>
+            <div className='container mx-auto relative '>
+                <div className='flex flex-col gap-4 mb-5'>
+                    <div>
+                        <h4> Most Popular</h4>
+                        <h1 className="">Travel <span>Countries</span>  </h1>
+                    </div>
+                </div>
+
+                <PopularDestinationCaroucel tours={tours} />
+            </div>
+
+
+        </section>
+    )
 }
 
 export default TravelCountries2
 
 
-export const PopularDestinationCaroucel = ({tours}:{tours:TourType[]})=>{
+export const PopularDestinationCaroucel = ({ tours }: { tours: TourType[] }) => {
     const settings = {
-        customPaging: function() {
+        customPaging: function () {
             return (
-                <div   className={`caroucelDot `} ></div>
+                <div className={`caroucelDot `} ></div>
             );
-          },
+        },
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        
+
         arrows: false,
-      };
-      //const { category, title, img, footerText }=tours[4]
-    return(
-      <Slider {...settings}>
-      {tours.map(({ category, title, img, footerText }, idx:number) => (
-<div className={`relative p-5 orderGrid  ${idx%2!==0 && "left"} `} key={idx} >
-      <img className='lg:w-3/4 ml-auto' src={img} alt="" />
-  <div className="md:absolute  md:top-1/2 md:-translate-y-1/2 mt-0 bg-white md:w-1/2 p-5 country country1    " 
-  
-  style={{
-        backgroundImage:'url("./map1.png")',
-        backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'contain',
-      }}    >
+    };
+    //const { category, title, img, footerText }=tours[4]
+    return (
+        <Slider {...settings}>
+            {tours.map(({ category, title, img, footerText }, idx: number) => (
+                <div className={`relative p-5 orderGrid  ${idx % 2 !== 0 && "left"} `} key={idx} >
+                    <img className='lg:w-3/4 ml-auto' src={img} alt="" />
+                    <div className="md:absolute  md:top-1/2 md:-translate-y-1/2 mt-0 bg-white md:w-1/2 p-5 country country1    "
+
+                        style={{
+                            backgroundImage: 'url("./map1.png")',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: 'contain',
+                        }}    >
                         <div className="section-title2">Italy, Europe</div>
                         <p>We provide you with interesting and exciting tours to different parts of the world. Orci varius natoque penatibus et magnis disney turien nascete ridiculus duru in the mus nellen.</p>
                         <div className=" grid grid-cols-1 md:grid-cols-3  tour-list">
@@ -97,17 +97,17 @@ export const PopularDestinationCaroucel = ({tours}:{tours:TourType[]})=>{
                                 </ul>
                             </div>
                         </div>
-                        <div className="butn-dark mt-10  w-fit "> 
-                            <a href="#"  className="block w-full">
-                            <span className='relative z-2 flex justify-center items-center gap-2' >
-                                All Tours <ArrowRight/> 
-                            </span>
+                        <div className="butn-dark mt-10  w-fit ">
+                            <a href="#" className="block w-full">
+                                <span className='relative z-2 flex justify-center items-center gap-2' >
+                                    All Tours <ArrowRight />
+                                </span>
                             </a>
                         </div>
-  </div>
-</div>
-))}
-   </Slider>
+                    </div>
+                </div>
+            ))}
+        </Slider>
     )
 }
 
