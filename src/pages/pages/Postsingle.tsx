@@ -1,12 +1,13 @@
-import { BaselineCalendarMonth, ChevronRight, Reply, Search } from '../../icons/icons';
 import AboutHeader from '../about/AboutHeader';
+import LazyImage from '../../components/LazyImage';
+import { BaselineCalendarMonth, ChevronRight, Reply, Search } from '../../icons/icons';
 
 const Postsingle = () => {
 
     return (
         <>
             <AboutHeader
-                background='url(/slider/15.jpg)'
+                background='url(/travelAgency_clone/slider/15.jpg)'
                 title={
                     <div className="w-full lg:w-1/2  mt-[90px]">
                         <h6 className={`text-white text-[13px] font-[300] tracking-[6px] inline-block mb-[15px] uppercase `} > <span className='text-primary'>Blog</span> / Post Page            </h6>
@@ -14,7 +15,7 @@ const Postsingle = () => {
                             <h5 className={`uppercase`}>  Most Popular Yacht Charter Routes </h5>
                         </div>
                         <div className='flex z-5  w-fit justify-center items-center gap-2 text-white text-[13px] font-[300]  '>
-                            <img className='w-12 h-12' src="/team/06.png" alt="" />  Emma Emily
+                            <LazyImage className='w-12 h-12' src="/team/06.png" alt="Author" />  Emma Emily
                             <BaselineCalendarMonth className='text-xl ml-3' /> 30 Dec 2025
                         </div>
                     </div>
@@ -24,7 +25,7 @@ const Postsingle = () => {
                 <div className='container mx-auto py-[90px] grid gap-y-7 grid-cols-1 lg:grid-cols-3' >
                     <div className=' lg:col-span-2   flex flex-col gap-5 px-4'>
 
-                        <img src="/blog/22.jpg" alt="" />
+                        <LazyImage src="/blog/22.jpg" alt="Blog Post Image" />
                         <h2 className='text-3xl font-semibold xl text-[#0f2454] border-b  border-[#e6eaf6] pb-4'> Most Popular Yacht Charter Route </h2>
                         <p>Quisque pretium fermentum quam, sit amet cursus ante sollicitudin vel. Morbi risus conseua portito orci sit amet, iaculis nisl. Integer quis sapien neceli ultrices euismod sit amet id lacus. Sed a imperdiet erate. Duis eu est dignissim lacus dictum hendrerit quis vitae mi. Fusce eu nulla ac nisi cursus tincidun. Interan malesuada fames ac ante ipsum primis in faucibus. Integer tristique sem leo faucibus.</p>
                         <p>Nulla vitae metus tincidunt, varius nunc quis, porta nulla. Pellentesque vel dui nec libero auctor pretium sed arcu. Nunc consequat diam id nisl blani dinisim. Etiam commodo diam dolor, at scelerisque sem finibus sit amet. Curabitur id lectus eget purus finibus laoreet.</p>
@@ -75,21 +76,21 @@ const Postsingle = () => {
                                 <div className='flex gap-4 font-light text-sm  text-black ' >
                                     <div className='w-[90px] shrink-0  overflow-hidden'>
 
-                                        <img src="/blog/22.jpg" alt="" />
+                                        <LazyImage src="/blog/22.jpg" alt="Recent Post 1" />
                                     </div>
                                     <p className='hover:text-primary cursor-pointer' >Most Popular Yacht Charter Routes</p>
                                 </div>
                                 <div className='flex gap-4 font-light text-sm  text-black ' >
                                     <div className='w-[90px] shrink-0  overflow-hidden'>
 
-                                        <img src="/blog/33.jpg" alt="" />
+                                        <LazyImage src="/blog/33.jpg" alt="Recent Post 2" />
                                     </div>
                                     <p className='hover:text-primary cursor-pointer' >Tips Towards a Flawless Honeymoon</p>
                                 </div>
                                 <div className='flex gap-4 font-light text-sm  text-black ' >
                                     <div className='w-[90px] shrink-0  overflow-hidden'>
 
-                                        <img src="/blog/44.jpg" alt="" />
+                                        <LazyImage src="/blog/44.jpg" alt="Recent Post 3" />
                                     </div>
                                     <p className='hover:text-primary cursor-pointer' >Family Adventure Tours for Teens & Kids</p>
                                 </div>
@@ -150,7 +151,7 @@ export const Comment = ({ data, level = 0 }: { data: Comment; level?: number }) 
                 <div className='absolute flex justify-center items-center right-4 top-4 cursor-pointer hover:text-primary'>
                     <Reply /> Reply
                 </div>
-                <img className='rounded-full w-[90px] h-[90px]' src={data.img} alt='' />
+                <LazyImage className='rounded-full w-[90px] h-[90px]' src={data.img} alt={data.name} />
                 <div className='flex flex-col gap-1'>
                     <span className='font-bold text-lg'>{data.name}</span>
                     <span className='text-[#999] text-xs font-light'>{data.date}</span>

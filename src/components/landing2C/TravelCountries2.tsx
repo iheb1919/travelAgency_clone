@@ -6,6 +6,7 @@ import { Link } from 'react-router';
 import { ArrowRight, LocationIcon } from '../../icons/icons';
 import ImagecontainerTours from '../ImageContainer';
 import { TourType } from '../landingC/PopularDestination';
+import LazyImage from '../LazyImage';
 export const tours: TourType[] = [
 
     {
@@ -63,7 +64,7 @@ export const PopularDestinationCaroucel = ({ tours }: { tours: TourType[] }) => 
         <Slider {...settings}>
             {tours.map(({ category, title, img, footerText }, idx: number) => (
                 <div className={`relative p-5 orderGrid  ${idx % 2 !== 0 && "left"} `} key={idx} >
-                    <img className='lg:w-3/4 ml-auto' src={img} alt="" />
+                    <LazyImage className='lg:w-3/4 ml-auto' src={img} alt={title} />
                     <div className="md:absolute  md:top-1/2 md:-translate-y-1/2 mt-0 bg-white md:w-1/2 p-5 country country1    "
 
                         style={{

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Facebook, Whatsapp, Youtube } from '../../icons/icons'
+import LazyImage from '../../components/LazyImage'
 
 const AboutGuides = () => {
     return (
@@ -27,7 +28,7 @@ export default AboutGuides
 export const GuideCard = () => {
     return (
         <div className='relative group'>
-            <img src="/team/01.jpg" alt="" />
+            <LazyImage src="/team/01.jpg" alt="Guide Image" />
             <div className="font-bold w-[80%] duration-500 transition-[opacity,translate] group-hover:opacity-0 group-hover:-translate-y-10 absolute left-1/2 -bottom-7 -translate-x-1/2 bg-primary text-white flex items-center flex-col p-5  ">
                 <span className=''>Angelina White</span>
                 <span className=''>Greece Guide</span>

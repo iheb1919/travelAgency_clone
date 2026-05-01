@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { PlayLineDuotone } from "../../icons/icons"
+import LazyImage from "../LazyImage"
 
 const VideoGallery = () => {
     return (
@@ -13,23 +14,23 @@ const VideoGallery = () => {
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-6 gap-4' >
                     <div className=' overflow-hidden relative md:col-span-3' >
-                        <VideoProject image="./slider/15.jpg" url="https://www.youtube.com/embed/ODJgp1ITowg?autoplay=1" />
+                        <VideoProject image="/travelAgency_clone/slider/15.jpg" url="https://www.youtube.com/embed/ODJgp1ITowg?autoplay=1" />
                     </div>
 
                     <div className=' overflow-hidden relative md:col-span-3   ' >
-                        <VideoProject image="./slider/17.jpg" url="https://www.youtube.com/embed/ODJgp1ITowg?autoplay=1" />
+                        <VideoProject image="/travelAgency_clone/slider/17.jpg" url="https://www.youtube.com/embed/ODJgp1ITowg?autoplay=1" />
                     </div>
 
                     <div className=' overflow-hidden relative md:col-span-2' >
-                        <VideoProject image="./slider/2.jpg" url="https://www.youtube.com/embed/ODJgp1ITowg?autoplay=1" />
+                        <VideoProject image="/travelAgency_clone/slider/2.jpg" url="https://www.youtube.com/embed/ODJgp1ITowg?autoplay=1" />
                     </div>
 
                     <div className=' overflow-hidden relative md:col-span-2   ' >
-                        <VideoProject image="./slider/11.jpg" url="https://www.youtube.com/embed/ODJgp1ITowg?autoplay=1" />
+                        <VideoProject image="/travelAgency_clone/slider/11.jpg" url="https://www.youtube.com/embed/ODJgp1ITowg?autoplay=1" />
                     </div>
 
                     <div className=' overflow-hidden relative md:col-span-2   ' >
-                        <VideoProject image="./slider/1.jpg" url="https://www.youtube.com/embed/ODJgp1ITowg?autoplay=1" />
+                        <VideoProject image="/travelAgency_clone/slider/1.jpg" url="https://www.youtube.com/embed/ODJgp1ITowg?autoplay=1" />
                     </div>
 
 
@@ -65,7 +66,7 @@ export const VideoProject: React.FC<videoProjectPropsTypes> = ({ image, url }) =
     return (
         <>
             <div className=' overflow-hidden relative md:col-span-2   ' >
-                <img className='hover:scale-105 transition-all duration-500' src={image} alt="" />
+                <LazyImage className='hover:scale-105 transition-all duration-500' src={image} alt="Video Thumbnail" />
                 <button onClick={() => setOpen(true)} className="absolute cursor-pointer flex justify-center items-center text-white hover:bg-white hover:text-primary  w-[60px] h-[60px]  rounded-full border border-white bottom-5 right-10 ">
                     <PlayLineDuotone />
                 </button>

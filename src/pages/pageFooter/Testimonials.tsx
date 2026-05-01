@@ -1,4 +1,5 @@
 import { BaselineStar, PhoneCallSpeaker } from '../../icons/icons'
+import LazyImage from '../../components/LazyImage';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -74,7 +75,7 @@ const Testimonials = () => {
         arrows: false,
     };
     return (
-        <section data-overlay-dark="5" style={{ backgroundImage: "url('/slider/15.jpg')" }}
+        <section data-overlay-dark="5" style={{ backgroundImage: "url('/travelAgency_clone/slider/15.jpg')" }}
             className='py-[120px] md:pb-[0px] !m-0 bg-white bg-fixed bg-cover bg-no-repeat'>
             <div className='container mx-auto grid grid-cols-1 gap-y-15 md:grid-cols-2 z-2 relative'>
                 <div className="flex flex-col text-white">
@@ -114,7 +115,7 @@ const Testimonials = () => {
 
                                         <div className="flex gap-2">
                                             <div className='w-[65px] h-[65px] overflow-hidden rounded-full'>
-                                                <img src="./team/06.png" alt="" />
+                                                <LazyImage src="./team/06.png" alt="Testimonial Author" />
                                             </div>
                                             <div className='flex flex-col '>
                                                 <div className='flex gap-0'> {Array(5).fill(null).map((_, i) => <BaselineStar key={i} className={`${testimonial.stars >= i ? "text-orange-400" : "text-gray-500"}`} />)} </div>

@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import LazyImage from "../../components/LazyImage";
 const Brands = () => {
     const slides = [
         "/clients/1.png",
@@ -52,8 +53,8 @@ const Brands = () => {
                             <div
 
                                 className=" embla__slide h-full cursor-pointer w-[180px] max-w-[220px]  flex justify-between items-center  " key={index}>
-                                <img
-                                    src={image} className="max-h-[85px] hover:grayscale  transition-all duration-300 hover:scale-110" />
+                                <LazyImage
+                                    src={image} alt={`Brand logo ${index + 1}`} className="max-h-[85px] hover:grayscale  transition-all duration-300 hover:scale-110" />
                             </div>
                         ))}
                     </Slider>

@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { TourType } from './PopularDestination';
 import { ChevronRight } from '../../icons/icons';
+import LazyImage from '../LazyImage';
 const tours: TourType[] = [
     {
         category: 'New',
@@ -123,7 +124,7 @@ export const TravelExperienceCaroucel = ({ tours }: { tours: TourType[] }) => {
                                 {/*  {category}  */}
 
                             </span>
-                            <img className='group-hover:brightness-70 transition-all duration-500 z-1' src={img} alt="" />
+                            <LazyImage className='group-hover:brightness-70 transition-all duration-500 z-1' src={img} alt={title} />
                             <div className='transition-all p-5 bg-white 
             body
              flex flex-col gap-3 z-2

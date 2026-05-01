@@ -1,4 +1,5 @@
 import { PhoneCallSpeaker } from '../../icons/icons'
+import LazyImage from '../LazyImage'
 
 const OurAgency = () => {
   return (
@@ -43,10 +44,10 @@ const OurAgency = () => {
           <div>
             <div className='   relative'>
               <div className='p-[0_30px_30px_15px] relative img '>
-                <img
+                <LazyImage
                   className="w-full  z-0 transition-[scale] duration-500  hover:scale-95"
                   src="/travelAgency_clone/about.jpeg"
-                  alt=""
+                  alt="Our Agency"
                 />
               </div>
             </div>

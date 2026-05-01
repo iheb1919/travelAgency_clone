@@ -1,6 +1,7 @@
 import React from 'react'
 import AboutHeader from '../about/AboutHeader'
 import { usePagination } from '../../hooks/usePaginationControls';
+import LazyImage from '../../components/LazyImage';
 
 const Blog1 = () => {
     const {
@@ -10,7 +11,7 @@ const Blog1 = () => {
     return (
         <>
             <AboutHeader
-                background='url(/slider/15.jpg)'
+                background='url(/travelAgency_clone/slider/15.jpg)'
                 title={
                     <div className="w-full lg:w-1/2 uppercase mt-[90px]">
                         <h6 className={`text-white text-[13px] font-[300] tracking-[6px] inline-block mb-[15px] uppercase `} > Read travel blog </h6>
@@ -33,7 +34,7 @@ const Blog1 = () => {
                             {/*  {category}  */}
 
                         </span>
-                        <img className='group-hover:brightness-70 transition-all duration-500 z-1' src="/destinations/france1.jpg" alt="" />
+                        <LazyImage className='group-hover:brightness-70 transition-all duration-500 z-1' src="/travelAgency_clone/destinations/france1.jpg" alt="Blog Post Image" />
                         <div style={{
                             margin: "-160px 20px 90px",
                             bottom: "-90px"

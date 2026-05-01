@@ -1,12 +1,13 @@
 import AboutHeader from '../about/AboutHeader'
 import { Search, ChevronRight } from '../../icons/icons'
 import { Link } from 'react-router'
+import LazyImage from '../../components/LazyImage'
 
 const Blog2 = () => {
     return (
         <>
             <AboutHeader
-                background='url(/slider/15.jpg)'
+                background='url(/travelAgency_clone/slider/15.jpg)'
                 title={
                     <div className="w-full lg:w-1/2 uppercase mt-[90px]">
                         <h6 className={`text-white text-[13px] font-[300] tracking-[6px] inline-block mb-[15px] uppercase `} > Read travel blog </h6>
@@ -22,7 +23,7 @@ const Blog2 = () => {
                 <div className='container mx-auto py-[90px] grid gap-y-7 grid-cols-1 lg:grid-cols-3' >
                     <div className=' lg:col-span-2   flex flex-col gap-5 px-4'>
 
-                        <img src="/blog/22.jpg" alt="" />
+                        <LazyImage src="/travelAgency_clone/blog/22.jpg" alt="Blog Main Image" />
                         <h6 className={`text-primary text-[13px] font-[300] tracking-[6px] inline-block !mb-[0px] uppercase `} >Tour </h6>
 
                         <h2 className='text-3xl font-semibold xl text-[#0f2454] border-b  border-[#e6eaf6] pb-4'> Most Popular Yacht Charter Route </h2>
@@ -63,21 +64,21 @@ const Blog2 = () => {
                                 <div className='flex gap-4 font-light text-sm  text-black ' >
                                     <div className='w-[90px] shrink-0  overflow-hidden'>
 
-                                        <img src="/blog/22.jpg" alt="" />
+                                        <LazyImage src="/travelAgency_clone/blog/22.jpg" alt="Recent Post 1" />
                                     </div>
                                     <p className='hover:text-primary cursor-pointer' >Most Popular Yacht Charter Routes</p>
                                 </div>
                                 <div className='flex gap-4 font-light text-sm  text-black ' >
                                     <div className='w-[90px] shrink-0  overflow-hidden'>
 
-                                        <img src="/blog/33.jpg" alt="" />
+                                        <LazyImage src="/travelAgency_clone/blog/33.jpg" alt="Recent Post 2" />
                                     </div>
                                     <p className='hover:text-primary cursor-pointer' >Tips Towards a Flawless Honeymoon</p>
                                 </div>
                                 <div className='flex gap-4 font-light text-sm  text-black ' >
                                     <div className='w-[90px] shrink-0  overflow-hidden'>
 
-                                        <img src="/blog/44.jpg" alt="" />
+                                        <LazyImage src="/travelAgency_clone/blog/44.jpg" alt="Recent Post 3" />
                                     </div>
                                     <p className='hover:text-primary cursor-pointer' >Family Adventure Tours for Teens & Kids</p>
                                 </div>

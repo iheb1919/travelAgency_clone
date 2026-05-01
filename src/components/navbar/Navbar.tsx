@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import NavLinkItem from "./navLink";
+import LazyImage from "../LazyImage";
 
 export type NavigationItem = {
   label: string;
@@ -111,8 +112,8 @@ function Navbar() {
       `}
     >
       <div className="container mx-auto flex justify-between items-center border-b border-white/10  h-full">
-        {scrolling ? <img src="/travelAgency_clone/logo-dark.png" alt="logoDark" width={140} height={40} />
-          : <img src="/travelAgency_clone/logo-light.png" alt="logoLight" width={140} height={40} />}
+        {scrolling ? <img src="/travelAgency_clone/logo-dark.png" alt="logoDark" width={140} height={40} loading="eager" />
+          : <img src="/travelAgency_clone/logo-light.png" alt="logoLight" width={140} height={40} loading="eager" />}
 
 
         <div className="flex-1 float-end">

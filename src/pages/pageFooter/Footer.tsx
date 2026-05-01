@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import { Link } from 'react-router';
 import { Whatsapp, Youtube, Facebook, ArrowDiagonalTopRight } from '../../icons/icons';
+import LazyImage from '../../components/LazyImage';
 export type quickListType = {
     title: string | ReactNode;
     url: string
@@ -26,7 +27,7 @@ const Footer = () => {
                 <div className='grid grid-cols-3 max-md:grid-cols-1 rounded-xl '>
                     <FooterElem
                         text="Rent a car imperdiet sapien porttito the bibenum ellentesue the commodo erat nesuen."
-                        title={<img className='w-[150px]' src="/logo-light.png" alt="" />}
+                        title={<img className='w-[150px]' src="/travelAgency_clone/logo-light.png" alt="Logo" />}
                         list={quickList2}
                     />
                     <FooterElem styles={{ marginLeft: "50px" }} title="Quick Links" list={quickList} />
@@ -79,8 +80,8 @@ export const FooterElem: React.FC<FooterElemProps> = ({ title, text, footer, lis
                                         {!isTitleObject && <div className='bg-primary h-1.5 w-1.5 rounded-full' > </div>}
                                         <Link
                                             className={`${isTitleObject
-                                                    ? "border w-12 h-12 rounded-full flex justify-center dark:hover:text-black hover:bg-primary items-center border-primary"
-                                                    : "block hover:text-primary  text-sm"
+                                                ? "border w-12 h-12 rounded-full flex justify-center dark:hover:text-black hover:bg-primary items-center border-primary"
+                                                : "block hover:text-primary  text-sm"
                                                 }`}
                                             to={item.url}
                                         >

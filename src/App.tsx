@@ -24,25 +24,25 @@ import Blog2 from './pages/blog/Blog2';
 import ContactPage from './pages/contact/ContactPage';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const awaitTimeOut = (delay:number)=> new Promise<void>((resolve, reject) => {
-  setTimeout(resolve,delay)
+const awaitTimeOut = (delay: number) => new Promise<void>((resolve, reject) => {
+  setTimeout(resolve, delay)
 })
-export const loader = async ()=>{
+export const loader = async () => {
   await awaitTimeOut(5)
   return 1
 }
 
-const RouteWrapper = ()=>{
+const RouteWrapper = () => {
 
-  
-   const  {state}=useNavigation()
-   if(state === 'loading') return <div className='flex justify-center items-center w-screen h-screen text-white' >
+
+  const { state } = useNavigation()
+  if (state === 'loading') return <div className='flex justify-center items-center w-screen h-screen text-white' >
     <div className='w-32 h-32'>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><radialGradient id="a4" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)"><stop offset="0" stop-color="#2095AE"></stop><stop offset=".3" stop-color="#2095AE" stop-opacity=".9"></stop><stop offset=".6" stop-color="#2095AE" stop-opacity=".6"></stop><stop offset=".8" stop-color="#2095AE" stop-opacity=".3"></stop><stop offset="1" stop-color="#2095AE" stop-opacity="0"></stop></radialGradient><circle transform-origin="center" fill="none" stroke="url(#a4)" stroke-width="15" stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2" values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></circle><circle transform-origin="center" fill="none" opacity=".2" stroke="#2095AE" stroke-width="15" stroke-linecap="round" cx="100" cy="100" r="70"></circle></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><radialGradient id="a4" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)"><stop offset="0" stop-color="#2095AE"></stop><stop offset=".3" stop-color="#2095AE" stop-opacity=".9"></stop><stop offset=".6" stop-color="#2095AE" stop-opacity=".6"></stop><stop offset=".8" stop-color="#2095AE" stop-opacity=".3"></stop><stop offset="1" stop-color="#2095AE" stop-opacity="0"></stop></radialGradient><circle transform-origin="center" fill="none" stroke="url(#a4)" stroke-width="15" stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2" values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></circle><circle transform-origin="center" fill="none" opacity=".2" stroke="#2095AE" stroke-width="15" stroke-linecap="round" cx="100" cy="100" r="70"></circle></svg>
     </div>s
-   </div>
-  return(
-      <Outlet/>
+  </div>
+  return (
+    <Outlet />
   )
 }
 const MainLayout = () => {
@@ -68,11 +68,11 @@ const MinimalLayout = () => (
 
 function App() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const {toggleMode}=useThemeMode()
+  const { toggleMode } = useThemeMode()
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route element={<RouteWrapper/>}>
+      <Route element={<RouteWrapper />}>
         {/* Main layout: Home, About, etc */}
         <Route
           element={
@@ -89,11 +89,11 @@ function App() {
           <Route path="/tours2" element={<Tours2 />} />
           <Route path="/tours3" element={<Tours3 />} />
           <Route path="/destinations" element={<DestinationPage />} />
-          <Route path="/contact" element={<ContactPage/>}/>
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path='/blog' element={<Outlet/>} >
-          <Route path="blog1" element={<Blog1 />} />
-          <Route path="blog2" element={<Blog2 />} />
+          <Route path='/blog' element={<Outlet />} >
+            <Route path="blog1" element={<Blog1 />} />
+            <Route path="blog2" element={<Blog2 />} />
           </Route>
           <Route path="/pages" element={<Outlet />} >
             <Route path="details" element={<TourDetails />} />
@@ -107,7 +107,7 @@ function App() {
         </Route>
 
         {/* Auth-protected routes */}
-       {/*  <Route
+        {/*  <Route
           element={
             <ProtectedLayout>
               <MainLayout />
@@ -126,17 +126,17 @@ function App() {
             </ErrorBoundary>
           }
         >
-       {/*    <Route path="/login" element={<Login />} />
+          {/*    <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} /> */}
           <Route path="*" element={<NotFound />} />
         </Route>
       </Route>
-      ),
-      { basename: '/travelAgency_clone' }
+    ),
+    { basename: '/travelAgency_clone' }
   );
   return (
     <>
-     <RouterProvider router={router}/>   
+      <RouterProvider router={router} />
     </>
   )
 }
