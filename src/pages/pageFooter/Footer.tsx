@@ -45,7 +45,10 @@ const Footer = () => {
                         }
                     />}
                 </div>
-                <div className='text-xs dark:text-white/50  py-[40px] my-[40px] border-t border-[#222] ' >©2025  All right Reserved <span className='text-[var(--text-color)] text-sm  underline decoration-4 decoration-primary underline-offset-4' >  MEJRI Iheb</span> </div>
+                <div className='text-xs dark:text-white/50  py-[40px] my-[40px] border-t border-[#222] ' >©2025  All right Reserved <span className='text-[var(--text-color)] text-sm  underline decoration-4 decoration-primary underline-offset-4' >  MEJRI Iheb</span>
+
+                    **Design Inspiration**: [TRAVOL by DuruThemes]
+                </div>
             </div>
         </section>
     )
