@@ -1,31 +1,32 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'); */
 @import "tailwindcss";
-:root {
-    --font:'Barlow', sans-serif;
-    --font-Poppins: 'Poppins', sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    /*COLORS */
-    --primary:#2095AE;
-    --light_gray:#f4f5f8;
-    --text-color:#676977;
-    --darkBlue:#0f2454;
-  /*****images*/
-  --bottomFade: linear-gradient(1800deg, #1b1b1b 0%, rgba(27, 27, 27, 0) 70%);
+
+@theme {
+  --color-primary: #2095AE;
+  --color-light_gray: #f4f5f8;
+  --color-text_color: #676977;
+  --color-darkBlue: #0f2454;
+
+  --font-barlow: 'Barlow', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+
+  --breakpoint-lg: 62.5rem;
 
   --animate-spin: spin 15s linear infinite;
-  }
-  @theme{
-    --color-primary:#2095AE;
-    --font-md:16px;
-    --font-poppins:var(--font-Poppins);
-    --breakpoint-lg:62.5rem;
-    /* COLORS */
-    --color-light_gray:var(--light_gray);
-    --color-text_color:var(--text-color;);
-    --color-darkBlue:var(--darkBlue);
-    
-  }
+}
+
+:root {
+  --primary: var(--color-primary);
+  --light_gray: var(--color-light_gray);
+  --text-color: var(--color-text_color);
+  --darkBlue: var(--color-darkBlue);
+  --font: var(--font-barlow);
+  --font-Poppins: var(--font-poppins);
+
+  line-height: 1.5;
+  font-weight: 400;
+
+  --bottomFade: linear-gradient(180deg, #1b1b1b 0%, rgba(27, 27, 27, 0) 70%);
+}
   *,*::after,*::before{
     
     box-sizing: border-box;
