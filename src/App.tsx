@@ -22,6 +22,7 @@ import CommingSoon from './pages/pages/CommingSoon';
 import Blog1 from './pages/blog/Blog1';
 import Blog2 from './pages/blog/Blog2';
 import ContactPage from './pages/contact/ContactPage';
+import { useEffect } from 'react';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const awaitTimeOut = (delay: number) => new Promise<void>((resolve, reject) => {
